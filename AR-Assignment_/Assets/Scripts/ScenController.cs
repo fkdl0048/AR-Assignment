@@ -16,6 +16,8 @@ public class ScenController : MonoBehaviour
     
     private void Start()
     {
+        if (actionSteps.Length <= 0)
+            return;
         actionSteps[_currentStep]?.SetStep(textMeshProUGUI, animator);
         _currentStep++;
     }
